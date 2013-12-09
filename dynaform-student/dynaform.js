@@ -2,12 +2,12 @@
 jQuery(document).ready(function() {
     jQuery("#continent").change(function(event) {
         var continent = jQuery(":selected").attr("value");
+            var countries = jQuery("#country");
         console.log(continent);
         if (continent !== "clear") {
             var address = "http://www2.cs.hut.fi/~petri/countrydata/";
             address += continent + ".json?callback=?";
             console.log(address);
-            var countries = jQuery("#country");
             countries.empty();
             countries.append("<option value=\"clear\">-- choose country --</option>");
             jQuery.getJSON(address, function(data) {
@@ -29,6 +29,11 @@ jQuery(document).ready(function() {
                     console.log("error:");
                     console.log(jqxhr);
                 });
+        }
+        else {
+            // choose selected, reset country list
+            countries.empty();
+            countries.append("<option value=\"clear\">-- choose continent --</option>");
         }
     });
 });
