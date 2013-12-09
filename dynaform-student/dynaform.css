@@ -1,0 +1,17 @@
+body {
+  font-size: 120%;
+  padding: 1em;
+}
+table {
+  float: left;
+  margin-top: 1em;
+  border: 1px solid black;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+}
+table tr:nth-child(odd) {
+  background-color: #eee;
+}
+td { padding: 0.7em;}
+#infobox { display: none;}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Template</title>
+	<script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynaform.js"></script>
+    <link rel="stylesheet" type="text/css" href="dynaform.css" />
+</head>
+<body>
+  <form action="." id="selection">
+    Continent: <select id="continent" name="continent">
+      <option value="clear">-- choose --</option>
+      <option value="af">Africa</option>
+      <option value="an">Antarctica</option>
+      <option value="as">Asia</option>
+      <option value="eu">Europe</option>
+      <option value="na">North America</option>
+      <option value="oc">Oceania</option>
+      <option value="sa">South America</option>
+    </select>
+    Country: <select id="country" name="country">
+      <option value="">-- choose continent --</option>
+    </select>
+  </form>
+  <div id="infobox">
+    <table>
+      <tbody>
+        <tr><td>Name:</td><td id="countryname"></td></tr>
+        <tr><td>Population:</td><td id="countrypopulation"></td></tr>
+        <tr><td>Area:</td><td id="countryarea"></td></tr>
+        <tr><td>Capital:</td><td id="countrycapital"></td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
